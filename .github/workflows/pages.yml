@@ -1,9 +1,12 @@
 name: mkdocs-build
-
+permissions:
+  id-token: write
+  contents: read
+  pages: write
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
