@@ -53,7 +53,8 @@ To individually demonstrate proficiency in installing and running the Cypress PS
 
 In this assignment, you may use either the CY8CKIT-042 or CY8CKIT-042-BLE evaluation boards. It is recommended that you lay out the large components prior to wiring to ensure sufficient space on your breadboard.
 
-1. Complete [ICC2 - Hello, World! (PSoC)](/304/304-icc-02-hello-world-psoc/).
+1. Complete [ICC2 - Hello, World! (PSoC)](https://suo-teaching-team.github.io/egr-304-spring2026/304/304-icc-02-hello-world-psoc/).
+
 
 ### 2.0 Onboard Button, LEDs, and Morse Code
 
