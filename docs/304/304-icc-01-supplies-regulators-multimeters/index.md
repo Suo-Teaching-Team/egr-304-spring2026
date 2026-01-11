@@ -1,7 +1,7 @@
 ---
 title: 304 LAB 1 -- Power Supplies, Voltage Regulators, Benchtop Multimeters, & Power Supply Schematic Design 
 ---
-> This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
+> **This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Part 1: Power Supplies, Voltage Regulators, & Benchtop Multimeters
 ## Objectives
