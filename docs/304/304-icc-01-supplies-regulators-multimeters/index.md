@@ -1,139 +1,171 @@
+# **EGR 304 — Lab 1**
+## **Power Supplies, Voltage Regulators, and Schematic Design**
+
+> This lab combines **ICC1** and **HW1** into a **single integrated lab**.  
+> You may work with **one partner** during construction and analysis, but **all demonstrations and schematics must be your own**.
+
 ---
-title: 304 ICC1 -- Power Supplies, Voltage Regulators, & Benchtop Multimeters
+
+## **Lab Objectives**
+
+By completing this lab you will demonstrate proficiency in:
+
+1. Designing an adjustable **5V linear voltage regulator** using the **LM317**
+2. Using **datasheets** to determine safe operating conditions
+3. Using a **benchtop power supply**
+4. Using a **digital multimeter (DMM)** to measure voltage and current
+5. Creating a **professional ECAD schematic** (KiCad or Cadence)
+6. Creating a **custom symbol library and regulator symbol**
+
 ---
 
-> This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
+## **Tools & Software**
 
-## Objectives
+You may use:
+- **KiCad** (recommended)
+- **Cadence** (optional)
 
-In this assignment, you will learn how to use benchtop power supplies and benchtop multimeters to measure voltage, as well as how to use a datasheet to properly design an adjustable linear voltage regulator circuit to output 5V. This voltage is one of the most common for embedded systems, and will be used in your upcoming assignments.
+Install the EGR304 software stack:  
+https://embedded-systems-design.github.io/egr304-software-stack/
 
-You must demonstrate with your partner proficiency in:
+---
 
-1. Designing voltage regulator circuits.
-1. Using a benchtop multimeter to measure the no-load output voltage of a benchtop power supply.
-1. Using a benchtop multimeter to measure the no-load output voltage of a regulator.
-1. Using a benchtop multimeter to measure regulator output voltage under load.
+## **Hardware & Parts**
 
-> This in-class checkoff requires advance work in order to complete it within one class period. Please read through all datasheets and prepare your circuits as much as possible prior to class time.
+| Item | Quantity |
+|------|---------|
+| Breadboard | 1 |
+| Jumper wires | Many |
+| LM317BT adjustable regulator | 1 |
+| 1N4007 diodes | 2 |
+| 0.1 µF ceramic capacitor | 1 |
+| 10 µF electrolytic capacitor | 1 |
+| 1 µF tantalum capacitor | 1 |
+| 2 kΩ resistor | 1 |
+| 10 kΩ potentiometer | 1 |
+| 5.1 Ω 10 W power resistor | 1 |
+| Fixed resistors (for final design) | as needed |
 
-## Resources
+---
 
-* Scherz & Monk, Chapter 7: Hands on Electronics
-    * Section 7.3: Multimeters
+## **Pre-Lab Preparation**
 
-* Scherz & Monk, Chapter 11: Voltage Regulators and Power Supplies
+Using the LM317 datasheet:
 
-* [BK Precision Triple-Output 30V, 5A Digital Display DC Power Supply (Model 1671)](https://www.bkprecision.com/products/power-supplies/1671A) ([manual](https://bkpmedia.s3.amazonaws.com/downloads/manuals/en-us/1671A_manual.pdf))
-* [Agilent Digital Multimeter (Model 34461A)](https://www.keysight.com/us/en/support/34461A/digital-multimeter-6-5-digit-truevolt-dmm.html) ([manual](https://www.dropbox.com/s/futmq59a8ftekqs/Agilent_DMM_34461A.pdf?dl=0))
+1. Find the **maximum allowed**  
+   \( V_{in} - V_{out} \)
 
-## Bill of Materials
+2. Using the **dropout voltage**, determine the **minimum input voltage** needed to maintain:
+   \[
+   V_{out} = 5V
+   \]
 
-| **Item**                                 | **Quantity** | **Value(s)**                                                                                                                                                                                                                                                                             |
-| ---------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Breadboard                               | 1            | (from your kit)                                                                                                                                                                                                                                                                          |
-| Jumper Wires                             | multiple     | (from your kit)                                                                                                                                                                                                                                                                          |
-| LM317BT Variable Output Linear Regulator | 1            | ([DigiKey](https://www.digikey.com/en/products/detail/stmicroelectronics/LM317BT/5308099)) ([Datasheet](https://www.st.com/content/ccc/resource/technical/document/datasheet/group1/a0/db/e6/9b/6f/9c/45/7b/CD00000455/files/CD00000455.pdf/jcr:content/translations/en.CD00000455.pdf)) |
-| Ceramic Capacitor                        | 1            | 0.1 $\mu$F (100nF) ([labeling](https://www.wikihow.com/Read-a-Capacitor))                                                                                                                                                                                                 |
-| Ceramic Capacitor                        | 1            | 10 $\mu$F polarized electrolytic                                                                                                                                                                                                                                          |
-| 1/4 W Resistor                           | 1            | 2 k$\Omega$                                                                                                                                                                                                                                                               |
-| Potentiometer                            | 1            | 10 k$\Omega$                                                                                                                                                                                                                                                              |
-| Power Resistor                           | 1            | 5.1$\Omega$ 10W ([DigiKey](https://www.digikey.com/product-detail/en/nte-electronics-inc/10W5D1/2368-10W5D1-ND/11650045)) at workbench during checkoff                                                                                                                                   |
-| Barrel (power) jack *(optional)*         | 1            | ([DigiKey](https://www.digikey.com/en/products/detail/cui-devices/PJ-102AH/408448)) ([Datasheet](https://www.cuidevices.com/product/resource/pj-102ah.pdf))                                                                                                                              |
+3. Find the **minimum output current** and compute the resistor required from output to ground to guarantee it.
 
-## Prior to Demonstration of Proficiency
+You will need this resistor in your circuit.
 
-| **Critical Information and Concepts**                                                                                                                                                                                                                                                                                                 | **Importance**                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Within the voltage regulator's datasheet, find the absolute maximum ratings and determine the maximum differential voltage $ V_{i}$ -$ V_{o}$ for the regulator. Given our desire for $ V_{o}$=5V, what is the **maximum** value allowed on $ V_{i}$?                                                                                 | Supplying an input voltage that is too high will damage the voltage regulator                                                                                                                                             |
-| Within the datasheet, note the *dropout voltage* in Figure 4. Select the maximum dropout voltage (worst case situation for all current values given). From our desired $ V_{out}$=5V, calculate the minimum input voltage required to drive anything from 20mA to 1.5A.                                                               | Supplying an input voltage that is too low will prevent the regulator from achieving the desired voltage                                                                                                                  |
-| Look at the datasheet and determine the minimum output current. Find the resistance between output and ground that achieves this minimum current at your selected voltage.<br>You will need to add a resistor between output and ground **no greater** than this calculated value to achieve the **minimum** required output current. | Some voltage regulators require a little bit of current in order to fully turn on. Without the stated minimum output current, your regulator is not fully operational and the measured output voltages **will** be wrong. |
+---
 
-1. Review [Power Supples 101](https://embedded-systems-design.github.io/power-supplies-101/) to learn what a voltage regulator is, and what types of voltage regulators exist. Discuss with your partner.
-1. Open the voltage regulator datasheet and construct on a breadboard the circuit shown below. (This is an adaptation of the circuits shown in the datasheet's Figures 6 and 7).
+## **Part A — Build the Regulator**
 
-    > Do not use the example resistances shown in the datasheet.
+1. Build the LM317 regulator on a breadboard based on the datasheet’s Figures 6 & 7.
+2. Add:
+   - Input and output capacitors
+   - Two protection diodes
+   - Minimum load resistor
+3. Use a **potentiometer** to adjust the output to **5.00 V**
 
-    ![](image4_9V.png)
+---
 
-    ***Figure 1:** Regulator Circuit adapted from the LM317BT datasheet*
+## **Part B — Electrical Measurements**
 
-1. Add an additional "minimum current" resistor (value calculated previously) between output and ground (resistor R3 in Figure 1 above). *This is not shown in the datasheet's application circuits.*
+Using the **BK Precision Power Supply** and **Agilent DMM**:
 
-    > **Alert:** please make sure that the power supply is disconnected from your breadboard before turning on power. You don't know what the last person set the voltage or current limit to, and this could damage your circuit when you power it up.
+1. Verify the power supply voltage with the DMM
+2. Measure:
+   - Regulator **input voltage**
+   - Regulator **output voltage (no load)**
+3. Adjust the potentiometer to get **5.00 V**
+4. Turn off power
+5. Add the **5.1 Ω load resistor**
+6. Turn on power
+7. Measure:
+   - Loaded output voltage
+   - Load current (briefly — parts will get hot)
 
-1. Turn on the Agilent Digital Multimeter (DMM) and set it to read DC volts (see [page 57 of the manual](https://www.dropbox.com/s/futmq59a8ftekqs/Agilent_DMM_34461A.pdf?dl=0))
-1. Turn the ***disconnected*** BK Precision DC power supply on and turn the current control knob all the way down, and then back up a little bit. Set the voltage to within the allowable range you found previously.
+---
 
-    > *The current control feature is helpful to control the amount of current going into a circuit (see [page 8 of the manual](https://bkpmedia.s3.amazonaws.com/downloads/manuals/en-us/1671A_manual.pdf)). Allowing too much current into an incorrect circuit can cause physical damage to PCBs and ICs.*
+## **Part C — Lock in 5V**
 
-1. Connect the DMM probes to the power supply probes and confirm that the voltage read on the DMM matches the voltage on the power supply display. Note any discrepancies.
-1. **Turn off the power supply.**
-1. Now, connect the power supply to your breadboard along the selected power and ground rails.
-1. You can now turn the power supply back on. Check the current and the over-current indicator. Is it in an over-current condition? Adjust the current dial until the over-current indicator turns off.
+1. Measure the potentiometer resistance that produced 5.00 V
+2. Remove the potentiometer
+3. Replace it with **fixed resistors** that give the same resistance
+4. Re-verify the output is still **5.00 V**
 
-    > *The power supply itself should draw almost no current (less than 20mA). The resistors you have selected should also draw very little current.*
+This is the circuit you will document in ECAD.
 
-1. For the voltage regulator circuit constructed above, complete the following design and circuit verification steps:
-    1. Measure the input voltage to the voltage regulator with the Agilent DMM.<br>*This reading confirms that the power supply is outputting the correct voltage.*
-    1. Measure the small-load output voltage of the voltage regulator with the Agilent DMM. Adjust the variable resistor / potentiometer until you achieve the desired 5V output.
-    1. **Turn off the power supply.**
-    1. Connect a 5.1Ω power resistor from the output of the voltage regulator to ground, in parallel with the other resistor.
-    1. **Turn on the power supply.**
-    1. *Briefly* measure the voltage across the resistor with your multimeter. **Be careful, the components will get hot.**<br> *This reading tells you how well the voltage regulator works under load. Note how this voltage changes when you gently increase the current limit of the power supply.*
-    1. **Turn off the power supply.**
-    1. Review [pages 62-63 of the DMM manual](https://www.dropbox.com/s/futmq59a8ftekqs/Agilent_DMM_34461A.pdf?dl=0) to learn how to measure DC current. Then, turn the power supply back on and ***briefly*** measure the current going through the resistor with the DMM. **Be careful, the resistor and/or voltage regulator will get hot.**<br> *This reading confirms how much current the regulator can supply.*
-    1. Measure the resistance across the two poles used in the potentiometer. This should be done by removing the potentiometer from the circuit before measuring it with the multimeter.  You can then replace it with an equivalent resistance using fixed resistors and re-test.
+---
 
-   > In HW1, you will **replace** the potentiometer with a fixed resistor, so be sure to write down the value you obtained up with before the end of class.
+## **Part D — ECAD Schematic**
 
-## Part 2. Individual Demonstration of Proficiency
+Create a professional schematic using **KiCad or Cadence**.
 
-In class, demonstrate the following **live** to a member of the teaching team by the end of class:
+You must:
 
-1. Your breadboard fully constructed with regulator circuit.
-1. DMM measurement of the output voltage of the regulator circuit under no-load conditions.
-1. DMM measurement of the output voltage of the regulator circuit under 5.1Ω load.
+1. Create a **custom symbol library**
+   - Must include **your initials** in the filename
+2. Create a **custom LM317 symbol**
+   - Must include **your initials** in the symbol name
+3. Draw the full regulator circuit
+   - Using **actual resistor values**
+   - Including diodes, capacitors, and minimum load resistor
+4. Use:
+   - `R_US`, `C_US`, `C_Polarized_US`
+   - **Earth ground**, not GND
+5. Check against:  
+   https://embedded-systems-design.github.io/schematic-checklist/
 
-**A live demonstration by the end of class is required. No late demonstrations will be accepted.**
+---
 
-## Canvas Submission
+## **Part E — Live Demonstration**
 
-**No Canvas submission is required.**
+Individually demonstrate to the teaching staff:
 
-## Grading
+1. Completed breadboard
+2. **5.00 V** no-load output
+3. **5.00 V** loaded output (5.1 Ω)
+4. Correct ECAD schematic and custom symbol
 
-| **Demonstration**                    | **Points** |
-| ------------------------------------ | ---------- |
-| 1. Completed breadboard              | 10         |
-| 2. 5V no-load output DMM measurement | 20         |
-| 3. 5V loaded output DMM measurement  | 20         |
-| **Total**                            | **50**     |
+No late demonstrations accepted.
 
-## Devices
+---
 
-| ![](image6.jpg)    | ![](image1.jpg) | ![](image3.jpg) |
-| ------------------ | --------------- | --------------- |
-| Digital Multimeter | Oscilloscope    | Power Supply    |
-| (Used)             | (Not Used)      | (Used)          |
+## **Canvas Submission**
 
-| ![](image8.jpg)    | ![](image2.jpg)    | ![](image11.jpg) |
-| ------------------ | ------------------ | ---------------- |
-| Function Generator | Waveform Generator | Soldering Iron   |
-| (Not Used)         | (Not Used)         | (Not Used)       |
+Submit:
 
-### Probes
+1. **PDF** of your schematic  
+2. **ZIP file** containing:
+   - Project files
+   - Custom symbol library
 
-| ![](image7.jpg) | ![](image5.jpg)    | ![](image10.jpg) |
-| --------------- | ------------------ | ---------------- |
-| Oscilloscope    | Digital Multimeter | Soldering Iron   |
-| (Not Used)      | (Used)             | (Not Used)       |
+Follow packaging instructions:  
+- KiCad: https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/  
+- Cadence: https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/
 
-<!--
+---
 
-Other content
+## **Grading (Total = 350 pts)**
 
-Go to page six and find the equation for Vo, and the nominal values for IADJ and VREF.
+| Item | Points |
+|------|-------|
+| Breadboard built correctly | 35 |
+| 5V no-load measurement | 50 |
+| 5V loaded measurement | 50 |
+| Custom symbol library | 25 |
+| Custom LM317 symbol | 25 |
+| Accurate schematic | 140 |
+| PDF submission | 25 |
+| **Total** | **350** |
 
-Given a value for R2=2 kOhm, compute the nominal value for variable resistor R1. Verify that this value is less than the value of the potentiometers handed out in class.
--->
+---
