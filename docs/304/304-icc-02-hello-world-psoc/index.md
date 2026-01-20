@@ -158,7 +158,7 @@ In this assignment, you may use either the CY8CKIT-042 or CY8CKIT-042-BLE evalua
     1. Add the BLE module to a schematic.
     1. Add all necessary components for minimum viable circuit. This includes:
 
-        ![Figure](image2.jpg){style="max-height:200px;"}
+        ![Figure](image22.jpg){style="max-height:200px;"}
 
         * A power connector (e.g., a through-hole barrel jack) so you can connect an external power supply to the board.
         * 0.1 µF [bypass capacitors](https://embedded-systems-design.github.io/bypass-capacitor-basics/) on **every** power pin connecting to the processor module (unless otherwise specified in the datasheet).
