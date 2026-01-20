@@ -146,7 +146,7 @@ In this assignment, you may use either the CY8CKIT-042 or CY8CKIT-042-BLE evalua
 
 1. Create a schematic for the CY8CKIT-143A BLE Module (Same footprint and pinout as the CY8CKIT-142). Following the resources for KiCad$^1$ or Cadence above,
 
-    ![Figure: CY8CKIT-143A BLE Module](image3.jpg){style="max-height:200px;"}
+    ![Figure: CY8CKIT-143A BLE Module](image33.jpg){style="max-height:200px;"}
 
     1. Create your own custom symbol for the CY8CKIT-143A BLE Module, including all connections for the 2x10 and 2x12 female headers found on the board. (Your board should include male headers.) **Do not create a symbol for the raw CY8C4248LQI-BL583 IC, you will be using the CY8CKIT-143A BLE module**
         * The symbol should include your initials in the symbol name *so that your **initials are visible** when the symbol is added to schematics.*
