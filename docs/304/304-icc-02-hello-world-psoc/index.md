@@ -1,6 +1,7 @@
 ---
 title: 304 Lab 2 -- Hello, World! (PSoC)
 ---
+This assignment has 2 parts 
 
 > For this assignment **individual** live demonstration is required. You may work in pairs, but must individually demonstrate your working breadboard.
 
@@ -64,7 +65,7 @@ In class, demonstrate the following **live** to a member of the Teaching Team by
 
 **A live demonstration by the end of class is required. No late demonstrations will be accepted.**
 
-## Objectives For Part 2
+## Part 2. Objectives
 
 To individually demonstrate proficiency in installing and running the Cypress PSoC Integrated Development Environment (IDE) tools to program sample code onto a microcontroller, and to modify that code and surrounding hardware to add additional functionality.
 
