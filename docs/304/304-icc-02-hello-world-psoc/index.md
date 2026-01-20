@@ -1,15 +1,14 @@
 ---
-title: 304 ICC2 -- Hello, World! (PSoC)
+title: 304 Lab 2 -- Hello, World! (PSoC)
 ---
 
-> This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
+> For this assignment **individual** live demonstration is required. You may work in pairs, but must individually demonstrate your working breadboard.
 
-## Objectives
+## Part 1. Objectives
 
 To individually demonstrate proficiency in installing and running the Cypress PSoC Integrated Development Environment (IDE) tools to program sample code onto a microcontroller, and to modify that code to add additional functionality.
 
-> This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets and prepare your circuits as much as possible.
-## Resources
+## Resources for Part 1
 
 * Videos
     * [Video Walkthrough of ICC2](https://youtu.be/2vDoY1uVJ-M) *(Thanks to Jacob S)*
@@ -34,7 +33,7 @@ To individually demonstrate proficiency in installing and running the Cypress PS
 
 Note: You may use either a [PSoC 4 Pioneer Kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/?utm_source=cypress&utm_medium=referral&utm_campaign=202110_globe_en_all_integration-dev_kit) or a [PSoC 4 BLE Pioneer Kit](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/?utm_source=cypress&utm_medium=referral&utm_campaign=202110_globe_en_all_integration-dev_kit) to complete this assignment. You will be using the BLE Pioneer Kit for your team project.
 
-1. If you don't have a PSoC 4 Pioneer Kit (BLE or regular), you can check one out from PRLTA 109, or buy one from Cypress ([BLE](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/?utm_source=cypress&utm_medium=referral&utm_campaign=202110_globe_en_all_integration-dev_kit), [regular](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/?utm_source=cypress&utm_medium=referral&utm_campaign=202110_globe_en_all_integration-dev_kit)).
+1. If you don't have a PSoC 4 Pioneer Kit (BLE or regular), you can check one out from PRLTA 109.
 1. If you have not completed it already, follow the instructions in the [EGR 304 Software Install](https://embedded-systems-design.github.io/egr304-software-stack/) page on the Embedded Systems Design website to download the full software stack, including PSoC Creator, the IDE for the PSoC microcontroller
 
     > *If you do not have a laptop that you can bring in for demonstration, you can use one of the computers in PRLTA 103*
@@ -42,7 +41,7 @@ Note: You may use either a [PSoC 4 Pioneer Kit](https://www.infineon.com/cms/en/
 ## Completed in Class
 
 1. Complete the [PSoC Hello World Lab](https://embedded-systems-design.github.io/psoc-hello-world/).
-1. Practice measuring the supply voltage for the Pioneer Kit using an Agilent benchtop (not handheld) multimeter.<br> *Hint:* Check the Pioneer Kit Guide on the main product page on the Cypress website for information on where the power pins are.
+1. *(not for a check off)* Practice measuring the supply voltage for the Pioneer Kit using an Agilent benchtop (not handheld) multimeter.<br> *Hint:* Check the Pioneer Kit Guide on the main product page on the Cypress website for information on where the power pins are.
     
     Next, you will modify the project to make a button enable or disable the blinking of the LED.
 
