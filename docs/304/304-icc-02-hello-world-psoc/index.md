@@ -200,10 +200,8 @@ Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedd
 | Onboard Button + Morse Code LED (Part 2 Demonstration) Correct blink, button press detection, Morse initials (500 ms dots), and repeat timing.                                   | 75 pts     |
 | PSoC® Creator™ Archive of Workspace Minimal archive submitted correctly. Opens without errors. Contains correct device selection, Top Design, pin configuration, and source files matching the demonstrated behavior.                  | 25 pts         |
 | Updated KiCAD / Cadence custom library included in KiCad / Cadence Project ZIP file Custom library updated from HW1, saved into HW2 project, project symbol table created and included in ZIP.                                             | 25 pts         |
-| Custom PSoC® symbol added to custom library
-Custom symbol created for CY8CKIT-143A BLE module (not raw IC). Includes all header pins only, correct pin names, accurate pin types, consistent pin numbering, and student initials included in symbol name.                            | 75 pts     |
-| Legible PDF of schematic included in submission
-Clean, readable PDF schematic submitted. ZIP includes all project and library files per KiCad/Cadence packaging instructions.                                                       | 25 pts     |
+| Custom PSoC® symbol added to custom library; Custom symbol created for CY8CKIT-143A BLE module (not raw IC). Includes all header pins only, correct pin names, accurate pin types, consistent pin numbering, and student initials included in symbol name.                            | 75 pts     |
+| Legible PDF of schematic included in submission; Clean, readable PDF schematic submitted. ZIP includes all project and library files per KiCad/Cadence packaging instructions.                                                       | 25 pts     |
 | **Total**                                                                                                                                                                         | **300 pts** |
 
 ## Devices
