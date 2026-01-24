@@ -1,18 +1,18 @@
 ---
-title: 304 ICC4 -- Analog I/O and UART (PSoC)
+title: 304 Lab 3 -- Analog I/O and UART (PSoC)
 ---
 
-> This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
+# This assignment has 2 parts 
 
-## Objectives
+## Objectives For Part 1
 
 Many sensors have an analog output that must be digitized using an Analog to Digital Converter (ADC) in order to use them in a microcontroller. The PSoC's ADC subsystem is the peripheral used to read analog values and convert it into a digital number for use in your program. It can be configured in a variety of ways. In this assignment, you will create an ADC component and program your microcontroller to transmit the result of reading an analog voltage measured at an input pin, using the ADC component in one of its simplest configurations.
 
-> This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.
+> This in-class checkoff requires advance work in order to complete it. Please read through the Lab, read all datasheets, and prepare your circuits as much as possible.
 
-## Resources
+## Resources For Part 1
 
-* [Video Walkthrough](https://urldefense.com/v3/__https://www.youtube.com/watch?v=sWcAb_V-L3A__;!!IKRxdwAv5BmarQ!Y9G6h1U3pjUXWgyaRoH6UfeASxcu3k2RkcN1GX9E2Jo2CZ_2LvmtEqfcPTCDOcSy4R8zEeaTKi-DJ4nE7I-RAaiA_yo$)
+* [Video Walkthrough For RT and TX Set up (using old board so you will need to use different pins)](https://urldefense.com/v3/__https://www.youtube.com/watch?v=sWcAb_V-L3A__;!!IKRxdwAv5BmarQ!Y9G6h1U3pjUXWgyaRoH6UfeASxcu3k2RkcN1GX9E2Jo2CZ_2LvmtEqfcPTCDOcSy4R8zEeaTKi-DJ4nE7I-RAaiA_yo$)
 * Scherz, P., & Monk, S. (2016). [Practical electronics for inventors, fourth edition.](https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&ie=UTF8&qid=1470699914&sr=1-1&keywords=practical+electronics+for+inventors+4th+edition) New York: McGraw Hill. ISBN: 978-1259587542
     * Analog input - Scherz & Monk, Section 13.5.2
 - [PSoC 4100S Plus Datasheet](https://www.cypress.com/file/396611/download)
@@ -31,7 +31,7 @@ Many sensors have an analog output that must be digitized using an Analog to Dig
 
 | **Item**                                                | **Quantity** | **Detail**           |
 | :------------------------------------------------------ | :----------- | :------------------- |
-| Voltage regulator circuit from HW1                      | 1            | See HW1              |
+| Voltage regulator circuit from Lab.1 Part 2             | 1            | See Lab.1 Part 2     |
 | Breadboard                                              | 1            |                      |
 | Jumper wires                                            | many         |                      |
 | CY8CKIT-042 (or CY8CKIT-042-BLE) PSoC 4 Prototyping Kit | 1            |                      |
@@ -40,8 +40,6 @@ Many sensors have an analog output that must be digitized using an Analog to Dig
 | 10 k$\Omega$ Potentiometer                              | 1            | from kit             |
 
 ## Prior to Demonstration of Proficiency
-
-*Complete all of the steps below prior to the demonstration of proficiency.*
 
 1. Study the following critical information and concepts:
 
@@ -67,15 +65,15 @@ Many sensors have an analog output that must be digitized using an Analog to Dig
 
 ### Creating a new PSoC project and top design
 
-1. Open PSoC Creator, create a new workspace for ICC4 and a new project for the CY8CKIT-042. Create a blank project, and call it something descriptive like "ADC-to-UART".
-1. Refer to page 23 of the CY8CKIT-042 PSoC 4 Pioneer Kit Guide and page 34 & 98 of the CY8CKIT-042-BLE-A Bluetooth Low Energy (BLE) Pioneer Kit Guide to get a sense of what you need to connect on your PSoC board to enable UART Rx and Tx. The back of your board also includes a summary of the connections required.
-1. Go to the Top Design. Add a UART module. This will automatically create a digital input pin (```Rx_1```) and digital output pin (```Tx_1```) already connected to it.
+1. Open PSoC Creator, create a new workspace for LAB 3 and a new project for the CY8CKIT-042. Create a blank project, and call it something descriptive like "ADC-to-UART".
+1. Refer to page 23 of the CY8CKIT-042 PSoC 4 Pioneer Kit Guide and page 34 & 98 of the CY8CKIT-042-BLE-A Bluetooth Low Energy (BLE) Pioneer Kit Guide to get a sense of what you need to connect on your PSoC board to enable UART Rx and Tx. <The back of your board also includes a summary of the connections required.>
+1. Go to the Top Design. Add a UART module (v2.50). This will automatically create a digital input pin (```Rx_1```) and digital output pin (```Tx_1```) already connected to it.
 1. In the Top Design, add a Sequencing SAR ADC module. Open the module to configure it further.
     1. In the General tab, set ```Vref``` select to ```VDDA```. This is the maximum voltage that the ADC can sample. ```VDDA``` corresponds with the voltage on the ```VDDA``` pin. Also set "Single ended negative input" to ```Vref```, and set the "Single ended result format" to Unsigned.
-    1. In the Channels tab, set Sequenced channels to 1. You will only be using one ADC channel at this time. Make sure the mode for the remaining channel is Single-ended (not differential). Leave the INJ channel at Diff.
-1. Add 1 Analog Pin to the Top Design, name it if you choose, and assign it to the port you connected the potentiometer to above. Create a wire from the Analog Pin to the input of the Sequencing SAR ADC module.
+    1. In the Channels tab, set Sequenced channels to 1. You will only be using one ADC channel at this time. Make sure the mode for the channel 0 is Single-ended (not differential). Leave the INJ channel at Diff. Hit OK.
+1. Add 1 Analog Pin to the Top Design, name it if you choose, and  create a wire from the Analog Pin to the input of the Sequencing SAR ADC module. Assign it to the port you connected the potentiometer to above (look at Figure 1).
 1. Go to the "Design Wide Resources → pins" page in your workspace and select the appropriate pin numbers based on your reading in step 4 above. Select a pin for reading an analog value into your ADC as well.
-1. Compile your project to automatically generate source files for the UART and ADC modules you just added.
+1. Build your project to automatically generate source files for the UART and ADC modules you just added.
 
 ### Writing code to output your initials to PuTTY
 
