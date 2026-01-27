@@ -8,7 +8,7 @@ title: 304 Lab 3 -- Using the PWM Subsystem
 
 The goal for this homework is to learn how to control MOSFETs and H-bridges for driving high-current actuators and other outputs from the PSoC at different speeds. By the end of this homework you will be able to *individually* demonstrate proficiency in using a bench oscilloscope to measure duty cycle, and in programming the Cypress PSoC 4 Pioneer Kit or BLE Pioneer Kit to output a pulse-width modulation (PWM) signal with a specific duty cycle.
 
-**An individual live demonstration of Part 3 (which includes Parts 1 and 2) of this assignment is required.**
+**An individual live demonstration of Parts 1 and 2 of this assignment is required.**
 
 ## Resources
 
