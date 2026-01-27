@@ -1,8 +1,8 @@
 ---
-title: 304 HW3 -- Using the PWM Subsystem
+title: 304 Lab 3 -- Using the PWM Subsystem
 ---
 
-> **This is an individual homework assignment** but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.
+> **For this assignment, you may work as a team, but must individually demonstrate your working breadboard.
 
 ## Objectives
 
@@ -38,44 +38,35 @@ The goal for this homework is to learn how to control MOSFETs and H-bridges for 
 | ----------------------------------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 5V Power Supply from ICC1 *(optional)*                | 1            |
 | CY8CKIT-042 (Pioneer or BLE) PSoC 4 Evaluation Board | 1            |
-| USB micro B cable                                     | 1            | Included in PSoC kit                                                                                                                                                                                                                           |
-| AOTF2618L MOSFET driver circuit from ICC3             | 1            | ([Digikey](https://www.digikey.com/product-detail/en/alpha-omega-semiconductor-inc/AOTF2618L/785-1442-5-ND/3603382)) ([datasheet](http://aosmd.com/res/data_sheets/AOTF2618L.pdf))                                                          |
-| FAN8100N H-Bridge driver circuit from ICC3            | 1            | ([Digikey](https://www.digikey.com/en/products/detail/fairchild-semiconductor/FAN8100N/11558200)) ([datasheet](https://rocelec.widen.net/view/pdf/1pizbjqffm/FAIRS23777-1.pdf?t.download=true&u=5oefqw))                                    |
-| Benchtop Power Supply                                 | 1            | Available at lab workbenches                                                                                                                                                                                                                    |
-| Benchtop Multimeter                                   | 1            | Available at lab workbenches                                                                                                                                                                                                                    |
-| Gear Motor (model 1)  **OR**                          | 1            | Available at lab workbenches ([Jameco](https://www.jameco.com/z/MD3B-14280-R-Nichibo-Taiwan-12V-DC-Reversible-Gear-Head-Motor-5214-RPM-180-1-30-RPM_2197476.html)) ([datasheet](https://www.jameco.com/Jameco/Products/ProdDS/2197476.pdf)) |
-| Gear Motor (model 2)                                  | 1            | Available at lab workbenches ([datasheet](https://web.archive.org/web/20230923052123/https://www.allelectronics.com/mas_assets/media/allelectronics2018/spec/DCM-416.pdf))) supplied in class, 1 per station **(do not take with you)** |
+| USB micro B cable                                     | 1            | Included in PSoC kit                                               |
+| AOTF2618L MOSFET driver circuit from ICC3             | 1            | ([Digikey](https://www.digikey.com/product-detail/en/alpha-omega-semiconductor-inc/AOTF2618L/785-1442-5-ND/3603382)) ([datasheet](http://aosmd.com/res/data_sheets/AOTF2618L.pdf))                                                           |
+| Benchtop Power Supply                                 | 1            | Available at lab workbenches                                       |
+| Benchtop Multimeter                                   | 1            | Available at lab workbenches                                       |
+
 
 ## Prior to Demonstration of Proficiency
 
 *Complete all of the steps below prior to the demonstration of proficiency.*
 
-*You will modify the MOSFET and H-bridge circuits from ICC3 in this assignment.*
+## Part 1: Using PWM to make an LED "Breathe"
 
-### Part 1: Using PWM to make an LED "Breathe"
+In this section, you will wire and program an LED to "breathe" on and off ([example](https://www.youtube.com/watch?v=HC6_3h8Qfw8)). Follow this guide to complete this Part [PWM Tutorial 1 – Using PWM to make an LED “Breathe”](https://embedded-systems-design.github.io/pwm-tutorial-1/)
 
-In this section, you will wire and program an LED to "breathe" on and off ([example](https://www.youtube.com/watch?v=HC6_3h8Qfw8)).  You will reconfigure the MOSFET motor circuit you designed in ICC3 to accommodate a LED and current limiting resistor, as seen in the tutorial.
+### Individual Demonstration of Proficiency Part 1
+Show your project and Top Design for Part 1. Compile, download, and demonstrate your solution working with the modified AOTF2618L MOSFET driver circuit. Show the top design and ```main.c``` solution for causing the LED to "breathe" using the PWM component.
 
-* You should remove the switch and other components (motor, diode)  that will not be used in this assignment from your MOSFET circuit.
-* Also note the change in power source -- the LED now uses the 5V regulated voltage from the ICC1 voltage regulator **or** the benchtop power supply, rather than unregulated power.
-* Now complete [PWM Tutorial 1 – Using PWM to make an LED “Breathe”](https://embedded-systems-design.github.io/pwm-tutorial-1/)
-
-## Part 2: Using PWM and an H-Bridge to Control Motor Speed
-
-In this part you will apply the "breathing" PWM approach toward a motor driven by an H-Bridge.  You will reconfigure the H-Bridge driver circuit you designed in ICC3 to accommodate a motor.
-
-* You should remove the switches and their associated pullup resistors components that were previously used to manually switch the motor's direction.
-* Now complete [PWM Tutorial 2 -- Using PWM and an H-Bridge to Control Motor Speed](https://embedded-systems-design.github.io/pwm-tutorial-2/)
-
-## Part 3: Using a Low-Pass Filter with a PWM Signal to Output an Analog Signal
+## Part 2: Using a Low-Pass Filter with a PWM Signal to Output an Analog Signal
 
 In this part you will use a passive RC filter to convert a switched, digital PWM output to a usable analog signal
 
 * Complete [PWM Tutorial 3 --  Using Low-Pass Filters with PWM Signals](https://embedded-systems-design.github.io/pwm-tutorial-3/)
 
-## Part 4: Schematic
+### Individual Demonstration of Proficiency Part 2
+1. Show your project and Top Design for Part 3. Compile, download, and demonstrate your solution working with the low-pass filter circuit shown above using a benchtop oscilloscope. Highlight the solution used in ```main.c``` to generate a signal. (The LED should still breathe and the motors should still move alongside your new solution).
 
-### Resources
+## Part 3: Schematic
+
+### Resources for Part 3
 
 * KiCad$^1$ [Getting Started](https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html) Pages on the KiCad$^1$ website:
     * Introduction to KiCad$^1$: [Download and Install](https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#download-and-install-kicad)
@@ -90,9 +81,10 @@ In this part you will use a passive RC filter to convert a switched, digital PWM
     * [Creating a custom library in Cadence](https://embedded-systems-design.github.io/creating-a-custom-library-in-cadence/)
     * [Creating a custom schematic symbol in Cadence](https://embedded-systems-design.github.io/creating-a-custom-schematic-symbol-in-cadence/)
     * [Creating a new project in Cadence](https://embedded-systems-design.github.io/creating-a-new-project-in-cadence/)
+--------------------------------------------------------------------------------------------------------------------------------------------
 
-1. Create ***one*** schematic for the three circuits used above. Following the resources for KiCad$^1$ or Cadence above, duplicate the MOSFET, H-bridge, and low-pass filter circuit that you built in Parts 1, 2, and 3.
-    1. Create your own custom symbol for MOSFET and FAN8100N that you are using to complete the assignment.
+1. Create ***both*** schematic used above, in ***one*** file. Following the resources for KiCad$^1$ or Cadence above.
+    1. Create your own custom symbol for MOSFET that you are using to complete the assignment.
         * The symbol should include your initials in the symbol name *so that your **initials are visible** when the symbol is added to schematics.*
         * Save your new symbol in the custom library you created in HW1 and updated in HW2.
     1. Add all other components, including the voltage used, resistors and resistance values selected, etc.
@@ -111,21 +103,14 @@ In this part you will use a passive RC filter to convert a switched, digital PWM
 
     > *Cadence:*Follow the instructions for [Packaging Cadence Files for Submission](https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/)
 
-## Individual Demonstration of Proficiency
+## Check that you did all the Individual Demonstration of Proficiency
 
 You must complete the demonstration individually, either in office hours or in class if time permits. **Demonstrations can be done up to the last office hours on the due date noted in Canvas. This assignment can not be demonstrated on Zoom on Saturdays due to the need for an oscilloscope.**  **No late demonstrations will be accepted**
 
-1. Show your project and Top Design for Part 1. Compile, download, and demonstrate your solution working with the modified AOTF2618L MOSFET driver circuit from ICC3. Show the top design and ```main.c``` solution for causing the LED to "breathe" using the PWM component.
-1. Show your project and Top Design for Part 2. Compile, download, and demonstrate your solution working with the FAN8100N H-Bridge driver circuit from ICC3. Highlight the solution used in ```main.c``` to make move the motor forward and backward with the two new PWM components. (The LED should still breathe alongside your new solution)
+1. Show your project and Top Design for Part 1. Compile, download, and demonstrate your solution working with the modified AOTF2618L MOSFET driver circuit. Show the top design and ```main.c``` solution for causing the LED to "breathe" using the PWM component.
 1. Show your project and Top Design for Part 3. Compile, download, and demonstrate your solution working with the low-pass filter circuit shown above using a benchtop oscilloscope. Highlight the solution used in ```main.c``` to generate a signal. (The LED should still breathe and the motors should still move alongside your new solution).
 
-**Successful demonstration of Part 3 (breathing LED, "ramping" motor, and Analog output measurement) is sufficient for demonstrating all three parts.**
-
-> Do not dismantle your circuit after demonstration. You will need it for HW4.
-
 <p></p>
-
-> Please don't take the motors with you, they are for demonstration purposes only. (We have a limited quantity of motors available.)
 
 ## Canvas Submission
 
@@ -141,15 +126,14 @@ Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedd
 
 ## Grading
 
-| **Item**                                                                          | **Points** |
-| --------------------------------------------------------------------------------- | ---------- |
-| Demonstration 1: Part 1 (Breathing LED)                                           | 50         |
-| Demonstration 2: Part 2 (Bidirectional Breathing Motor)                           | 50         |
-| Demonstration 3: Part 3 (Analog Output)                                           | 50         |
-| Separate ZIP file of single PSoC HW3 Workspace including all three projects      | 50         |
-| Legible PDF of Schematic *(-5 points for each mistake)*                           | 50         |
-| Separate ZIP file including updated library and new symbols *(-5 points for each mistake)* | 50         |
-| **Total**                                                                         | **300**    |
+| **Item**                                                                                              | **Points** |
+| ----------------------------------------------------------------------------------------------------- | ---------- |
+| Demonstration 1: Part 1 (Breathing LED)                                                               | 50         |
+| Demonstration 2: Part 2 (Analog Output)                                                               | 50         |
+| Separate ZIP file of single PSoC Lab3 Workspace including both projects                               | 50         |
+| Legible PDF of Schematic outside of ZIP FILE *(-5 points for each mistake)*                           | 50         |
+| Separate ZIP file including updated library and new symbols *(-5 points for each mistake)*            | 50         |
+| **Total**                                                                                             | **250**    |
 
 You must submit to Canvas **and** demonstrate your solution in order to receive credit. Late submissions and demonstrations will be graded per the policy in the syllabus.
 
