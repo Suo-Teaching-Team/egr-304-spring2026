@@ -1,5 +1,5 @@
 ---
-title: 304 Lab 3 -- Analog I/O and UART (PSoC)
+title: 304 Lab 4 -- Analog I/O and UART (PSoC)
 ---
 
 # This assignment has 2 parts 
