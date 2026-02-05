@@ -6,20 +6,18 @@ title: 304 HW4 -- Amplifying Analog Signals
 
 ## Objectives
 
-The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from HW3's PWM Output
+The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from Lab 3's PWM Output
 
 **An individual live demonstration of Parts 3, 4, & 5 (which includes Parts 1 and 2) of this assignment is required.**
 
-## Walkthrough Video (Thanks Ean)
+## Walkthrough Video (Thanks Milan!)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ttM15kePqQI?si=wmPTqqQbPiV4AH3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=sMMXunHu-to&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Resources
 
 * [Enable floating point support](https://embedded-systems-design.github.io/enable-floating-point-support/) in PSoC Creator
 * Videos
-    * [Video Walkthrough](https://www.youtube.com/watch?v=ttM15kePqQI) (Thanks Ean)
-    * [Older Video Walkthrough](https://youtu.be/sMMXunHu-to) (Thanks Milan!)
     * Oscilloscope output: [https://youtu.be/JBDF59Gd5ks](https://youtu.be/JBDF59Gd5ks)
 * Scherz, P., & Monk, S. (2016). [Practical electronics for inventors, fourth edition.](https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&ie=UTF8&qid=1470699914&sr=1-1&keywords=practical+electronics+for+inventors+4th+edition) New York: McGraw Hill. ISBN: 978-1259587542 *(**many** circuit design resources)*
     * Chapter 8: Operational Amplifiers
@@ -36,8 +34,8 @@ The purpose of this assignment is to understand how Op-Amps can be used to ampli
 | **Item**                                        | **Quantity** | **Detail**                                                                                                                                                                                                       |
 | :---------------------------------------------- | :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | LM324N                                          | 1            | ([Digikey](https://www.digikey.com/en/products/detail/texas-instruments/LM324N/277627) / [datasheet](https://www.ti.com/lit/ds/symlink/lm224.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&ts=1664291051389) ) |
-| DAC low-pass filter circuit from HW3 Part 3     | 1            | See HW3                                                                                                                                                                                                          |
-| Voltage Regulator circuit from HW1 *(optional)* | 1            | See HW1                                                                                                                                                                                                          |
+| DAC low-pass filter circuit from Lab 3 Part 2     | 1            | See Lab 3                                                                                                                                                                                                          |
+| Voltage Regulator circuit from Lab 1 *(optional)* | 1            | See Lab 1                                                                                                                                                                                                          |
 | Resistors                                       | multiple     | 2 x 10 kΩ and 2 x 1 kΩ                                                                                                                                                                                           |
 | Potentiometers                                  | 2            | 10 kΩ                                                                                                                                                                                                            |
 | Breadboard                                      | 1            |                                                                                                                                                                                                                  |
@@ -55,8 +53,8 @@ The purpose of this assignment is to understand how Op-Amps can be used to ampli
 >
 > CY8CKIT-042-BLE: See Section 5.1.2 of the kit guide, along with Figures 1-2 and 5-1.
 
-1. Once HW3 is checked off, **keep the connection from the PWM_4 subsystem to the low-pass filter on your breadboard in place.** You may disconnect the output jumper wires connecting the PSoC to the MOSFET and FAN80100N motor driver.
-1. Copy the HW3 "PWMAnalog" project into a new workspace named "HW4"
+
+1. Copy the lab 3 "PWMAnalog" project into a new workspace named "Lab 4" (you will be using the low-pass filter setup for this part)
 1. [Modify the project](https://embedded-systems-design.github.io/enable-floating-point-support/) to enable floating point number printing support in PSoC Creator.
 1. Open ```main.c```. Replace the contents with the following lines, then compile and download:
 
