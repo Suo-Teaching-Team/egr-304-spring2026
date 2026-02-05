@@ -4,7 +4,7 @@ title: 304 HW4 -- Amplifying Analog Signals
 
 > **This is an individual homework assignment** but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.
 
-## Objectives
+## Objectives For Part 2
 
 The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from Lab 3's PWM Output
 
@@ -14,7 +14,7 @@ The purpose of this assignment is to understand how Op-Amps can be used to ampli
 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=sMMXunHu-to&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Resources
+## Resources For Part 2
 
 * [Enable floating point support](https://embedded-systems-design.github.io/enable-floating-point-support/) in PSoC Creator
 * Videos
@@ -130,7 +130,19 @@ The purpose of this assignment is to understand how Op-Amps can be used to ampli
 1. Adjust the potentiometer and the "offset" variable in your code until you achieve the maximum gain without cutting off the output signal read on channel 2 of the oscilloscope.
 1. Compare the output and measurements of channel 1 and 3. How do they differ?
 
-## Part 2: Schematic
+## Individual Demonstration of Proficiency
+
+You must complete the demonstration individually, either in office hours or in class if time permits. **Demonstrations can be done up to the last office hours on the due date noted in Canvas. This assignment can not be demonstrated on Zoom on Saturdays due to the need for an oscilloscope.**  **No late demonstrations will be accepted**
+
+1. Properly set oscilloscope display settings on channels 1, 2, and 3.
+1. Properly set oscilloscope measurement settings on channels 1, 2, and 3.
+1. Properly controlled sinusoidal analog signal on channel 1, verified by oscilloscope.
+1. Inverting op-amp: Properly amplified output signal on channel 2, verified by oscilloscope.
+1. Non-Inverting op-amp: Properly amplified output signal on channel 3, verified by oscilloscope.
+
+**Successful demonstration of Parts 3, 4, and 5 is sufficient for demonstrating all five parts.**
+
+## Schematic
 
 ### Resources
 
@@ -163,18 +175,6 @@ The purpose of this assignment is to understand how Op-Amps can be used to ampli
  > *Cadence:*Follow the instructions for [Packaging Cadence Files for Submission](https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/)
 
 1. Package your files for submission to Canvas
-
-## Individual Demonstration of Proficiency
-
-You must complete the demonstration individually, either in office hours or in class if time permits. **Demonstrations can be done up to the last office hours on the due date noted in Canvas. This assignment can not be demonstrated on Zoom on Saturdays due to the need for an oscilloscope.**  **No late demonstrations will be accepted**
-
-1. Properly set oscilloscope display settings on channels 1, 2, and 3.
-1. Properly set oscilloscope measurement settings on channels 1, 2, and 3.
-1. Properly controlled sinusoidal analog signal on channel 1, verified by oscilloscope.
-1. Inverting op-amp: Properly amplified output signal on channel 2, verified by oscilloscope.
-1. Non-Inverting op-amp: Properly amplified output signal on channel 3, verified by oscilloscope.
-
-**Successful demonstration of Parts 3, 4, and 5 is sufficient for demonstrating all five parts.**
 
 ## Canvas Submission
 
