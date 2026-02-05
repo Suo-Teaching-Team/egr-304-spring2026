@@ -552,9 +552,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#walkthrough-video-thanks-ean" class="md-nav__link">
+  <a href="#walkthrough-video-thanks-milan" class="md-nav__link">
     <span class="md-ellipsis">
-      Walkthrough Video (Thanks Ean)
+      Walkthrough Video (Thanks Milan!)
     </span>
   </a>
   
@@ -742,17 +742,15 @@
 <p><strong>This is an individual homework assignment</strong> but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.</p>
 </blockquote>
 <h2 id="objectives">Objectives</h2>
-<p>The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from HW3's PWM Output</p>
+<p>The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from Lab 3's PWM Output</p>
 <p><strong>An individual live demonstration of Parts 3, 4, &amp; 5 (which includes Parts 1 and 2) of this assignment is required.</strong></p>
-<h2 id="walkthrough-video-thanks-ean">Walkthrough Video (Thanks Ean)</h2>
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ttM15kePqQI?si=wmPTqqQbPiV4AH3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h2 id="walkthrough-video-thanks-milan">Walkthrough Video (Thanks Milan!)</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=sMMXunHu-to&amp;feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://embedded-systems-design.github.io/enable-floating-point-support/">Enable floating point support</a> in PSoC Creator</li>
 <li>Videos<ul>
-<li><a href="https://www.youtube.com/watch?v=ttM15kePqQI">Video Walkthrough</a> (Thanks Ean)</li>
-<li><a href="https://youtu.be/sMMXunHu-to">Older Video Walkthrough</a> (Thanks Milan!)</li>
 <li>Oscilloscope output: <a href="https://youtu.be/JBDF59Gd5ks">https://youtu.be/JBDF59Gd5ks</a></li>
 </ul>
 </li>
@@ -786,14 +784,14 @@
 <td style="text-align: left;">(<a href="https://www.digikey.com/en/products/detail/texas-instruments/LM324N/277627">Digikey</a> / <a href="https://www.ti.com/lit/ds/symlink/lm224.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&amp;ts=1664291051389">datasheet</a> )</td>
 </tr>
 <tr>
-<td style="text-align: left;">DAC low-pass filter circuit from HW3 Part 3</td>
+<td style="text-align: left;">DAC low-pass filter circuit from Lab 3 Part 2</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">See HW3</td>
+<td style="text-align: left;">See Lab 3</td>
 </tr>
 <tr>
-<td style="text-align: left;">Voltage Regulator circuit from HW1 <em>(optional)</em></td>
+<td style="text-align: left;">Voltage Regulator circuit from Lab 1 <em>(optional)</em></td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">See HW1</td>
+<td style="text-align: left;">See Lab 1</td>
 </tr>
 <tr>
 <td style="text-align: left;">Resistors</td>
@@ -835,8 +833,7 @@
 <p>CY8CKIT-042-BLE: See Section 5.1.2 of the kit guide, along with Figures 1-2 and 5-1.</p>
 </blockquote>
 <ol>
-<li>Once HW3 is checked off, <strong>keep the connection from the PWM_4 subsystem to the low-pass filter on your breadboard in place.</strong> You may disconnect the output jumper wires connecting the PSoC to the MOSFET and FAN80100N motor driver.</li>
-<li>Copy the HW3 "PWMAnalog" project into a new workspace named "HW4"</li>
+<li>Copy the lab 3 "PWMAnalog" project into a new workspace named "Lab 4" (you will be using the low-pass filter setup for this part)</li>
 <li><a href="https://embedded-systems-design.github.io/enable-floating-point-support/">Modify the project</a> to enable floating point number printing support in PSoC Creator.</li>
 <li>Open <code>main.c</code>. Replace the contents with the following lines, then compile and download:<pre><code>#include "project.h"
 #include "math.h"
