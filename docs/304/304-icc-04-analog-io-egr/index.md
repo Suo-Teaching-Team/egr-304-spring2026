@@ -135,14 +135,11 @@ The purpose of this assignment is to understand how Op-Amps can be used to ampli
 
 **An individual live demonstration of Parts 3, 4, & 5 (which includes Parts 1 and 2) of this assignment is required.**
 
-## Walkthrough Video (Thanks Milan!)
-
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=sMMXunHu-to&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Resources For Part 2
 
 * [Enable floating point support](https://embedded-systems-design.github.io/enable-floating-point-support/) in PSoC Creator
 * Videos
+    * Walkthrough: [https://www.youtube.com/watch?v=sMMXunHu-to&feature=youtu.be](https://www.youtube.com/watch?v=sMMXunHu-to&feature=youtu.be)
     * Oscilloscope output: [https://youtu.be/JBDF59Gd5ks](https://youtu.be/JBDF59Gd5ks)
 * Scherz, P., & Monk, S. (2016). [Practical electronics for inventors, fourth edition.](https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&ie=UTF8&qid=1470699914&sr=1-1&keywords=practical+electronics+for+inventors+4th+edition) New York: McGraw Hill. ISBN: 978-1259587542 *(**many** circuit design resources)*
     * Chapter 8: Operational Amplifiers
@@ -322,18 +319,10 @@ Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedd
 | Demonstration Part 3: Sinusoidal Analog Signal                                             | 40         |
 | Demonstration Part 4: Amplified Inverted Output Signal                                     | 40         |
 | Demonstration Part 5: Amplified Non-Inverted Output Signal                                 | 40         |
-| Separate ZIP file of single PSoC HW4 Workspace including all projects                     | 50         |
+| Separate ZIP file of single PSoC HW4 Workspace including all projects                      | 50         |
 | Legible PDF of Schematic *(-5 points for each mistake)*                                    | 50         |
 | Separate ZIP file including updated library and new symbols *(-5 points for each mistake)* | 50         |
 | **Total**                                                                                  | **300**    |
-
-## Rubric
-
-| **Item**        | **Points** |
-| :-------------- | :--------- |
-| Demonstration 1 | 10         |
-| Demonstration 2 | 40         |
-| **Total**       | **50**     |
 
 ## Devices
 
