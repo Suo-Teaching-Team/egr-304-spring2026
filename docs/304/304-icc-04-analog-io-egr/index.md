@@ -31,7 +31,7 @@ Many sensors have an analog output that must be digitized using an Analog to Dig
 
 | **Item**                                                | **Quantity** | **Detail**           |
 | :------------------------------------------------------ | :----------- | :------------------- |
-| Voltage regulator circuit from Lab.1 Part 2             | 1            | See Lab.1 Part 2     |
+| Voltage regulator circuit from Lab.1 Part 2 (optional)  | 1            | See Lab.1 Part 2     |
 | Breadboard                                              | 1            |                      |
 | Jumper wires                                            | many         |                      |
 | CY8CKIT-042 (or CY8CKIT-042-BLE) PSoC 4 Prototyping Kit | 1            |                      |
