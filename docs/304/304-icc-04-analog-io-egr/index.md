@@ -127,13 +127,11 @@ In class, demonstrate the following **live** to a member of the Teaching Team by
 
 1. Compile, download, and demonstrate your solution to the "Reading an analog value and outputting it to PuTTY" section above, where you should see the ADC values change in PuTTY when you turn the potentiometer.
 
-**A live demonstration by the end of class is required. No late demonstrations will be accepted.**
+**Complete "Individual Demonstration of Proficiency for Part 1" Before working on Part 2. No late submissions are accepted**
 
 # Objectives For Part 2
 
 The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from Lab 3's PWM Output
-
-**An individual live demonstration of Parts 3, 4, & 5 (which includes Parts 1 and 2) of this assignment is required.**
 
 ## Resources For Part 2
 
@@ -262,7 +260,7 @@ You must complete the demonstration individually, either in office hours or in c
 1. Inverting op-amp: Properly amplified output signal on channel 2, verified by oscilloscope.
 1. Non-Inverting op-amp: Properly amplified output signal on channel 3, verified by oscilloscope.
 
-**Successful demonstration of Parts 3, 4, and 5 is sufficient for demonstrating all five parts.**
+**Successful demonstration of Parts 2.3, 2.4, and 2.5 is sufficient for demonstrating all five parts. No late submissions are accepted**
 
 ## Schematic
 
@@ -314,11 +312,10 @@ Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedd
 
 | **Item**                                                                                   | **Points** |
 | ------------------------------------------------------------------------------------------ | ---------- |
-| Demonstration Part 1: Oscillocope Display Settings                                         | 15         |
-| Demonstration Part 2: Oscilloscope Measurement Settings                                    | 15         |
-| Demonstration Part 3: Sinusoidal Analog Signal                                             | 40         |
-| Demonstration Part 4: Amplified Inverted Output Signal                                     | 40         |
-| Demonstration Part 5: Amplified Non-Inverted Output Signal                                 | 40         |
+| Demonstration Part 1: Reading an analog value and outputting it to PuTTY                   | 30         |
+| Demonstration Part 2.1, 2, and 3: Sinusoidal Analog Signal                                 | 40         |
+| Demonstration Part 2.4: Amplified Inverted Output Signal                                   | 40         |
+| Demonstration Part 2.5: Amplified Non-Inverted Output Signal                               | 40         |
 | Separate ZIP file of single PSoC HW4 Workspace including all projects                      | 50         |
 | Legible PDF of Schematic *(-5 points for each mistake)*                                    | 50         |
 | Separate ZIP file including updated library and new symbols *(-5 points for each mistake)* | 50         |
