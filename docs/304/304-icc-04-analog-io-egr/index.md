@@ -2,7 +2,7 @@
 title: 304 Lab 4 -- Analog I/O and UART (PSoC)
 ---
 
-# This assignment has 2 parts 
+> This assignment has 2 parts 
 
 # Objectives For Part 1
 
