@@ -1,5 +1,5 @@
 ---
-title: 304 ICC5 -- Filtering Analog Signals
+title: 304 Lab 5 -- Filtering Analog Signals
 ---
 
 > This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
@@ -14,7 +14,7 @@ You must demonstrate with your partner proficiency in:
 2. Setting up a function generator with specific desired frequencies.
 3. Testing and measuring output signals of a function generator and a low-pass filter by using an oscilloscope.
 
-> This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.
+> This in-class checkoff requires advance work in order to complete it. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.
 
 ## Resources
 
@@ -41,15 +41,12 @@ You must demonstrate with your partner proficiency in:
 | Benchtop function generator | 1            |                                    |
 | Benchtop oscilloscope       | 1            |                                    |
 
-## Prior to Class
-
-1. Read Scherz & Monk Sections 9.1 and 9.2 to learn what a filter is.
+> Use Scherz & Monk Sections 9.1 and 9.2 to better understand what a filter is. Page. 695 of the PDF : <http://instrumentacion.qi.fcen.uba.ar/libro/Scherz.pdf>
 
 ## Prior to Demonstration of Proficiency
 
-1. Discuss what you learned from Scherz & Monk Sections 9.1 and 9.2 with your partner.
 2. Design a low-pass filter with a 50 Hz cutoff. Look in Section 9.2 of the textbook, find the equation of cutoff frequency ($f_c$) in a low-pass filter. You need to select one of two existing capacitors first (i.e., select an existing value of capacitance - 0.1 µF (104) or 10 µF (106)). Then, apply the equation you find to calculate the value of resistance. Select a resistor that has a corresponding resistance with the resistance you calculated.
-3. Construct a low-pass filter circuit on your breadboard with a resistor and a capacitor you selected. You may review Section 9.2 of the textbook for the circuit.
+3. Construct a low-pass filter circuit on your breadboard with a resistor and a capacitor you selected. You may review Section 9.2 of the textbook for the circuit diagram.
 4. Turn on the BK Precision function generator and setup by:
     1. Turning knobs of "DUTY CYCLE", "CMOS LEVEL", "DC OFFSET", and "OUTPUT LEVEL" all the way down, and then back up the output level between 25 - 50%.
     1. Turning knobs of "COARSE" and "FINE" all the way down. You will turn the COARSE knob to set the frequency.
@@ -78,7 +75,7 @@ In class, demonstrate the following **live** to a member of the Teaching Team by
 5. Demonstrating, with the oscilloscope, your measurement of amplitude and frequency of the signal at the output of the high-pass filter at 5Hz.
 6. Demonstrating, with the oscilloscope, your measurement of amplitude and frequency of the signal at the output of the high-pass filter at 500Hz.
 
-**A live demonstration by the end of class is required. No late demonstrations will be accepted.**
+**A live demonstration is required. No late demonstrations will be accepted.**
 
 ## Canvas Submission
 
