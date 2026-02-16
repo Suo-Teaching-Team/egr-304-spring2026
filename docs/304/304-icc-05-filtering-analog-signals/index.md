@@ -85,13 +85,13 @@ In class, demonstrate the following **live** to a member of the Teaching Team by
 
 | **Demonstration**   | **Points** |
 | ------------------- | ---------- |
-| 1.  Demonstration 1 | 5         |
-| 2.  Demonstration 2 | 5         |
+| 1.  Demonstration 1 | 10         |
+| 2.  Demonstration 2 | 10         |
 | 3.  Demonstration 3 | 10         |
 | 4.  Demonstration 4 | 10         |
 | 5.  Demonstration 5 | 10         |
 | 6.  Demonstration 6 | 10         |
-| **Total**           | **50**     |
+| **Total**           | **60**     |
 
 ### Devices
 
