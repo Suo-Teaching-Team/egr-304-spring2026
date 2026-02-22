@@ -1,14 +1,14 @@
 ---
-title: 304 ICC7 -- Bluetooth with PSoC
+title: 304 Lab 6 -- Bluetooth with PSoC
 ---
 
 > This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
 
 ## Introduction
 
-The purpose of this ICC is to introduce students to the PSoC's capabilities at interacting with smartphones and PCs using the CySmart windows app and AIROC Bluetooth Connect App or Lightblue BLE phone app.
+The purpose of this Lab is to introduce students to the PSoC's capabilities at interacting with smartphones and PCs using the CySmart windows app and AIROC Bluetooth Connect App or Lightblue BLE phone app.
 
-> This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.
+> This in-class checkoff requires advance work in order to complete it. Please read through the Lab, read all datasheets, and prepare your circuits as much as possible.
 
 ## Resources
 
