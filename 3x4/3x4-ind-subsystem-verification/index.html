@@ -598,18 +598,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-ide-project-zip" class="md-nav__link">
+  <a href="#2-subsystem-testing" class="md-nav__link">
     <span class="md-ellipsis">
-      2. IDE Project ZIP
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-subsystem-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Subsystem Testing
+      2. Subsystem Testing
     </span>
   </a>
   
@@ -712,146 +703,16 @@
 </ol>
 <h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
 <p><em>You must complete the demonstration individually, either in office hours or in class if time permits.</em></p>
-<blockquote>
-<p><strong><em>EGR304:</em></strong> You must complete this assignment using either 1) a custom PCB designed by you from your individual <strong>Subsystem Design</strong> assignment <strong>or</strong> a thru-hole plated perfboard (see FAQ). <strong>You may not use a breadboard, evaluation board, or your team's full PCB. See the FAQ below for a comparison of permitted board types</strong></p>
-</blockquote>
-<p></p>
-
-<blockquote>
-<p><strong><em>EGR314:</em></strong> You must complete this assignment using a custom PCB designed by you from your individual <strong>Subsystem Design</strong> assignment. <strong>You may not use a breadboard, perfboard, evaluation board, or your team's full PCB.</strong></p>
-</blockquote>
 <ol>
-<li>Open and talk through the block diagram and schematic for your subsystem PCB. <em>All documents must be up-to-date, easy to read, and must be consistent with each other.</em></li>
-<li>Show in the block diagram which subsystems have your name on them. These are the subsystems that you are responsible for.</li>
-<li>Power up your physical subsystem PCB and show with a multimeter that the correct regulated voltage is connected to <strong>all</strong> of the correct pins (e.g., all of the VCC pins on the microcontroller) on the PCB</li>
-<li>Demonstrate that your board has your name on it.</li>
-<li>Demonstrate the correct functionality of at least one of your assigned subsystems on your PCB. (If you have multiple assigned subsystems on your PCB, you only need to demonstrate one besides the power supply).
-<a name="verification"></a></li>
+<li>Powering up your board and circuit</li>
+<li>Showing your circuit functioning in the way it is intended</li>
 </ol>
-<table>
-<thead>
-<tr>
-<th><strong>Type of Subsystem</strong></th>
-<th><strong>Test 1</strong></th>
-<th><strong>Test 2</strong></th>
-<th><strong>Test 3</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PSoC + BLE<br><strong><em>(304 only)</em></strong></td>
-<td>Demonstrate powering your PSoC via an external power connector (not the onboard USB)</td>
-<td>Unplug external power, connect your PSoC to the computer, and demonstrate blinking an external LED</td>
-<td>Demonstrate a potentiometer being read by the PSoC controlling the delay between LED blinks. (You can connect a potentiometer to extra pins in your design)</td>
-</tr>
-<tr>
-<td>PIC<br><strong><em>(314 only)</em></strong></td>
-<td>Demonstrate using the MPLAB SNAP to successfully program and verify via ICSP your main microcontroller soldered to your PCB</td>
-<td>Following successful ICSP, demonstrate your main microcontroller soldered to your PCB making an output change state</td>
-<td>Following successful ICSP, demonstrate your main microcontroller soldered to your PCB making an output change state based on reading an input</td>
-</tr>
-<tr>
-<td>ESP32<br><strong><em>(314 only)</em></strong></td>
-<td>Demonstrate programming the ESP32 with MicroPython and successfully downloading code</td>
-<td>Demonstrate web-based programming on your ESP32 to make the onboard LED blink</td>
-<td>Demonstrate bi-directional EUSART communication between your main microcontroller and ESP32 (via the PCB)</td>
-</tr>
-<tr>
-<td>Analog Sensor</td>
-<td>Verify pre-amplified sensor signal with oscilloscope or DMM</td>
-<td>Verify post-amplified signal with oscilloscope or DMM</td>
-<td>Verify microcontroller is reading amplified signal</td>
-</tr>
-<tr>
-<td>Serial Sensor</td>
-<td>Demonstrate that the serial sensor is powered from the power supply.</td>
-<td>Verify that serial data is coming out of the sensor with an oscilloscope or DMM</td>
-<td>Demonstrate controlling an actuator (e.g., LED) to turn on and off or reverse based on the current value of the sensor</td>
-</tr>
-<tr>
-<td>Serial Actuator</td>
-<td>Demonstrate that the serial actuator is powered from the power supply.</td>
-<td>Verify that serial data is coming out of the microcontroller connected to the serial actuator with an oscilloscope</td>
-<td>Demonstrate controlling the serial actuator to turn on and off based on the current value of a sensor (e.g., button)</td>
-</tr>
-<tr>
-<td>Bidirectional Motor</td>
-<td>Demonstrate motor controlled by the microcontroller to rotate in one direction</td>
-<td>Demonstrate motor controlled by the microcontroller to rotate in the opposite direction</td>
-<td>Demonstrate motor alternating directions based on sensing a state change on a pin (e.g. pushbutton to change direction) through the microcontroller.</td>
-</tr>
-<tr>
-<td>Stepper Motor</td>
-<td>Demonstrate motor controlled by the microcontroller to run at a slow speed</td>
-<td>Demonstrate motor controlled by the microcontroller to run at a fast speed</td>
-<td>Demonstrate motor controlled by the microcontroller to run in both directions</td>
-</tr>
-<tr>
-<td>Switching Output</td>
-<td>Verify driver signal from microcontroller with DMM</td>
-<td>Verify low-current signal from transistor with DMM</td>
-<td>Verify high-current signal from transistor with DMM</td>
-</tr>
-<tr>
-<td>PWM Output / RGB LED</td>
-<td>Verify duty cycle from microcontroller with DMM</td>
-<td>Verify different duty cycle from microcontroller with DMM</td>
-<td>Demonstrate subsystem that uses PWM functioning as a result of the signal</td>
-</tr>
-<tr>
-<td>SD Card (read/write)</td>
-<td>Write file from computer. Read file info from microcontroller to some output. Demonstrate on at least two different files.</td>
-<td>Write file from microcontroller. Read file info on computer. Demonstrate writing at least two different files.</td>
-<td>Read and write file from microcontroller. Demonstrate on at least two different files.</td>
-</tr>
-<tr>
-<td>Speaker</td>
-<td>Verify analog signal output from DAC or audio signal generator controlled by microcontroller</td>
-<td>Verify analog signal output from amplifier</td>
-<td>Verify speaker outputs sound</td>
-</tr>
-<tr>
-<td>Voice Recorder IC</td>
-<td>Verify power going to IC</td>
-<td>Verify recording works</td>
-<td>Verify playback works, controlled by the microcontroller</td>
-</tr>
-<tr>
-<td>UART MP3 Player IC</td>
-<td>Verify power going to IC</td>
-<td>Verify initiating playback of a song from the microcontroller</td>
-<td>Verify switching from one song to another when a button is pressed</td>
-</tr>
-<tr>
-<td>LCD Screen</td>
-<td>Verify power going to LCD screen</td>
-<td>Verify displaying a single message on the LCD screen</td>
-<td>Verify changing the text on the LCD screen based on an input (button or potentiometer)</td>
-</tr>
-<tr>
-<td>Other</td>
-<td>Develop a custom plan with your professor in advance</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h2 id="canvas-submission">Canvas Submission</h2>
-<p>Please submit your <strong><em>final</em></strong> <em>updated</em> subsystem design based on prior checkpoints, including schematic and board layout. Your final submission should include 2 PDF files (one of the schematic and another of the PCB layout) and 1 ZIP file of the IDE project. <em>Do not submit links to Google documents.</em> It is your responsibility to ensure that your submission to <a href="https://canvas.asu.edu">Canvas</a> was successful. Late <a href="https://canvas.asu.edu">Canvas</a> submissions will be graded per the policy in the syllabus. No credit will be awarded for assignments not submitted to <a href="https://canvas.asu.edu">Canvas</a>.</p>
+<p>Please submit your <strong><em>final</em></strong> <em>updated</em> subsystem design based on prior checkpoints, including schematic and board layout. Your final submission should include 2 PDF files (one of the schematic and another of the PCB layout). <em>Do not submit links to Google documents.</em> It is your responsibility to ensure that your submission to <a href="https://canvas.asu.edu">Canvas</a> was successful. Late <a href="https://canvas.asu.edu">Canvas</a> submissions will be graded per the policy in the syllabus. No credit will be awarded for assignments not submitted to <a href="https://canvas.asu.edu">Canvas</a>.</p>
 <p><strong>Your schematic and PCB PDFs must be legible in order to be graded. Rasterized (pixelated) images will receive a 0 if they are illegible. Do not submit screenshots.</strong></p>
 <h3 id="1-legible-schematic-and-board-layout-pdf">1. Legible Schematic and Board Layout PDF</h3>
 <p>Follow the <a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Packaging a Cadence Schematic Project for Submission to Canvas</a> instructions to create PDFs of both your schematic and your PCB layout. You do not need to submit ZIP files of your Cadence project. <strong>Do not submit screenshots.</strong></p>
-<h3 id="2-ide-project-zip">2. IDE Project ZIP</h3>
-<p>You must submit the code used in your subsystem PCB demonstration in a single ZIP file.</p>
-<ul>
-<li>
-<p>In PSoC Creator, right-click on the Workspace, select "Archive Workspace/Project..." from the contextual menu, and select a Minimal archive.</p>
-</li>
-<li>
-<p>In MPLabX, right-click on your project name in the Projects window and select "Package".</p>
-</li>
-</ul>
-<h3 id="3-subsystem-testing">3. Subsystem Testing</h3>
+<h3 id="2-subsystem-testing">2. Subsystem Testing</h3>
 <p>Demonstrations may be completed through the date noted in Canvas. Your grade will be documented in a spreadsheet and later uploaded to the Canvas gradebook. Late demonstrations will be graded per the policy in the syllabus.</p>
 <h2 id="grading">Grading</h2>
 <table>
@@ -864,34 +725,15 @@
 <tbody>
 <tr>
 <td>1. Completed <em>updated</em> legible schematic <strong>and</strong> completed legible PCB design in PDF format only <em>(required for grading)</em> <br><em>-10 points per mistake up to -100 points, or 0 points if either the PDF is illegible or no demonstration is completed.</em></td>
-<td>100</td>
+<td>250</td>
 </tr>
 <tr>
-<td>2. IDE Project ZIP. <em>0 points if no demonstration is completed.</em></td>
-<td>100</td>
-</tr>
-<tr>
-<td>Test 1 successfully demonstrated</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Test 2 successfully demonstrated</td>
-<td>100</td>
-</tr>
-<tr>
-<td>Test 3 successfully demonstrated</td>
-<td>200</td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td><strong>600</strong></td>
+<td>Test successfully demonstrated</td>
+<td>350</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li><strong><em>This assignment depends on successful completion of of the "Individual Subsystem Design" assignment to receive credit for this part.</em></strong></li>
-<li><strong><em>The schematic and board design must match what is manufactured and tested to receive credit for any part of the assignment.</em></strong></li>
-</ul>
+<p>| <strong>Total</strong>                                                                                                                                                                                                                                              | <strong>600</strong>    |</p>
 <p>You must submit to Canvas <strong>and</strong> demonstrate your solution in order to receive credit. Late submissions and demonstrations will be graded per the policy in the syllabus.</p>
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 <p><strong>Q:</strong> What is a plated perfboard?</p>
