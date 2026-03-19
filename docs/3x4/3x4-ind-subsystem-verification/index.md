@@ -6,7 +6,7 @@ title: Subsystem Verification
 "Testing can show the presence of errors, but not their absence"  
 \- Edsger Dijkstra, computer scientist (1930-2002)
 
-> **This is an individual homework assignment** but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.
+> **This is an individual assignment** but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.
 
 ## Objectives
 
@@ -16,8 +16,6 @@ In this assignment, you will test your subsystem design for the individual subsy
 1. Showing your circuit functioning in the way it is intended
 
 **This is an individual assignment** but you may work with others to determine how to complete the assignment. You must individually demonstrate proficiency.
-
-***(304 only)*** If all of your team members are able to fully check off their subsystem PCBs, your team's final PCB can be professionally manufactured instead of being manufactured in Peralta.
 
 ## Resources
 
@@ -32,7 +30,7 @@ In this assignment, you will test your subsystem design for the individual subsy
 
 *Complete all of the steps below prior to the demonstration of proficiency.*
 
-> ***EGR304:*** You must complete this assignment using either 1) a custom PCB designed by you from the individual **Subsystem Design** assignment **or** a thru-hole plated perfboard (see FAQ). **You may not use a breadboard, evaluation board, or your team's full PCB. See the FAQ below for a comparison of permitted board types**
+> ***EGR304:*** You must complete this assignment using either 1) a custom PCB designed by you from the individual **Subsystem Design** assignment **or** a thru-hole plated perfboard (see FAQ). **You may not use a breadboard or evaluation board. See the FAQ below for a comparison of permitted board types**
 
 <p></p>
 
