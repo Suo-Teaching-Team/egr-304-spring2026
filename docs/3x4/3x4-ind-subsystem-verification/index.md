@@ -76,7 +76,6 @@ Demonstrations may be completed through the date noted in Canvas. Your grade wil
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
 | 1. Completed *updated* legible schematic **and** completed legible PCB design in PDF format only *(required for grading)* <br>*-10 points per mistake up to -100 points, or 0 points if either the PDF is illegible or no demonstration is completed.* | 250        |
 | Test successfully demonstrated                                                                                                                                                                                                                         | 350        |
-
 | **Total**                                                                                                                                                                                                                                              | **600**    |
 
 
