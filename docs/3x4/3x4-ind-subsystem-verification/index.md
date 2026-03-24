@@ -1,5 +1,5 @@
 ---
-title: Lab 7. Subsystem Verification
+title: Lab 7 Subsystem Verification
 ---
 
 
